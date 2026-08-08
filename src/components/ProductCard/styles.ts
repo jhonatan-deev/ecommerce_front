@@ -4,7 +4,7 @@ export const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ theme }) => theme.borderRadius.md};
   overflow: hidden;
-  width: 220px;
+-  width: 220px;
 `;
 
 export const ImageWrapper = styled.div`

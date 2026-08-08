@@ -1,21 +1,14 @@
 import { listarProdutos } from '@/services/produtoService';
-import ProductCard from '@/components/ProductCard';
+import ProductsList from '@/components/ProductsList';
+import PageContainer from '@/components/layout/PageContainer';
 
 export default async function Home() {
   const { content: produtos } = await listarProdutos();
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '16px',
-        padding: '16px',
-      }}
-    >
-      {produtos.map((produto) => (
-        <ProductCard key={produto.id} produto={produto} />
-      ))}
-    </div>
+    <PageContainer>
+      <h1>Produtos</h1>
+      <ProductsList produtos={produtos} />
+    </PageContainer>
   );
 }
