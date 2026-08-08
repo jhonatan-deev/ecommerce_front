@@ -2,8 +2,8 @@ import { PageResponse, Produto } from '@/types/produto';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-export async function listarProdutos(): Promise<PageResponse<Produto>> {
-  const response = await fetch(`${API_URL}/produtos`, {
+export async function listarProdutos(page: number = 0): Promise<PageResponse<Produto>> {
+  const response = await fetch(`${API_URL}/produtos?page=${page}`, {
     cache: 'no-store',
   });
 

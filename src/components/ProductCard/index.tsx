@@ -1,3 +1,4 @@
+'use client'
 import { Produto } from '@/types/produto';
 import { Card, ImageWrapper, ProductImage, Placeholder, Info, Name, Price } from './styles';
 
